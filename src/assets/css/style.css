@@ -173,6 +173,10 @@
   top: 0 !important;
 }
 
+.pd-0 {
+  padding: 0 !important;
+}
+
 .pl-0 {
   padding-left: 0;
 }
@@ -348,6 +352,11 @@
   background: #648BF1;
 }
 
+.marriage_Record:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #648BF1;
+  box-shadow: 0px 16px 64px rgba(50, 50, 50, 0.24);
+}
+
 .colordBox {
   padding: 24px;
   width: 100%;
@@ -383,9 +392,20 @@
   background: #F16B64;
 }
 
+
+.wedding_laws:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #F16B64;
+  box-shadow: 0px 16px 64px rgba(50, 50, 50, 0.24);
+}
+
 /*--divorce Record--*/
 .divorce_recod {
   background: #CC64F1;
+}
+
+.divorce_recod:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #CC64F1;
+  box-shadow: 0px 16px 64px rgba(50, 50, 50, 0.24);
 }
 
 /*--advertisement Section--*/
@@ -756,7 +776,8 @@
   background: #FFFFFF;
   margin-bottom: 24px;
 }
-.tabsContantBox:last-child{
+
+.tabsContantBox:last-child {
   margin-bottom: 40px;
 }
 
@@ -1258,21 +1279,37 @@ ul.accordionListing {
 .mb-24 {
   margin-bottom: 24px;
 }
+
 .bgImage img {
   object-fit: cover;
   width: 100%;
 }
+
 .topSectionImage {
   position: relative;
   height: 507px;
 }
-.bgImage{
+
+.bgImage {
   position: absolute;
   background-image: url("../img/ceremonyImage.png");
-  right:0;
+  right: 0;
   height: 507px;
   width: 718px;
 }
-.sectionLeftCont{
+
+.sectionLeftCont {
   padding-left: 80px;
+}
+
+
+.accEdit {}
+
+
+.accordionBox.accEdit .accordion-button {
+  padding: 0;
+}
+
+.childAcc .accordion-item {
+  border: 1px solid rgba(26, 24, 70, 0.1);
 }

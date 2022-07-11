@@ -6,7 +6,7 @@ const OneHeadingBullets = ({ data, id }) => {
     return (
         <div id={id}>
             <div>
-                <Accordion defaultActiveKey="0" className={`contentBox brdrRadius4  accordionBox parentAccordion`} alwaysOpen>
+                <Accordion defaultActiveKey="0" className={`contentBox brdrRadius4  accordionBox parentAccordion accEdit`} alwaysOpen>
                     <Accordion.Item eventKey="0" alwaysOpen>
                         <Accordion.Header>{data.title}</Accordion.Header>
                         <Accordion.Body>

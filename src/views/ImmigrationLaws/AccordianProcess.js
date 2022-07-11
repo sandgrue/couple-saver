@@ -10,7 +10,7 @@ const AccordianProcess = ({ data }) => {
         <>
             {data.map(
                 (data, index) => (
-                    <Accordion defaultActiveKey="0" className={`${repeatingColorList[index]} accordionBox`} alwaysOpen>
+                    <Accordion defaultActiveKey="0" className={`childAcc ${repeatingColorList[index]} accordionBox`} alwaysOpen>
                         <Accordion.Item eventKey="0" alwaysOpen>
                             <Accordion.Header>{data.heading}</Accordion.Header>
                             <Accordion.Body>

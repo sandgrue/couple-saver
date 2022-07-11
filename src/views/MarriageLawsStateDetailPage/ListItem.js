@@ -29,11 +29,11 @@ const ListItem = () => {
                 </div>
                 <div class="staterightInfo ms-auto d-flex align-items-center">
                     <div class="feeBlock">
-                        <p class="price fontSize16 fontWeight600 greenColor mb-0">$91</p>
+                        <p class="price fontSize18 fontWeight700 mb-0">$91</p>
                         <p class="mb-0 fontSize14 fontWeight400 primaryColor">Public License Fee</p>
                     </div>
                     <div class="feeBlock">
-                        <p class="price fontSize16 fontWeight600 greenColor mb-0">$85</p>
+                        <p class="price fontSize18 fontWeight700 mb-0">$85</p>
                         <p class="mb-0 fontSize14 fontWeight400 primaryColor">Confidential License Fee</p>
                     </div>
                     <div class="feeBlock moreInfoBtn">
