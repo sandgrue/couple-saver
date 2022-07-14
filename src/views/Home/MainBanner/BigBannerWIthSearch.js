@@ -1,8 +1,28 @@
 import React from 'react'
+import apiConnector from '../../../backendConnect/apiService';
 
 // import '../../../../../assets'
 
 const BigBannerWIthSearch = () => {
+
+    const handleclick = () => {
+        // console.log("working");
+
+        let data = {
+            "search": "los",
+            "page": 1,
+            "pagination": 10
+        }
+        apiConnector("searchResult", data)
+            .then((response) => {
+                console.log(response, "working");
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
+
+
     return (
         <>
 
@@ -17,7 +37,7 @@ const BigBannerWIthSearch = () => {
                                 <a href="#"><img src={require('../../../assets/img/loctr.svg').default} /></a>
                                 <input type="text" class="form-control" placeholder="Find by county, state, or ZIP Code"
                                     aria-label="Username" />
-                                <button href="#" class="orangeBtn brdrRadius4 fontWeight700 fontSize16 transition">Search</button>
+                                <button href="#" class="orangeBtn brdrRadius4 fontWeight700 fontSize16 transition" onClick={() => { handleclick() }}>Search</button>
                             </div>
                         </div>
                     </div>
