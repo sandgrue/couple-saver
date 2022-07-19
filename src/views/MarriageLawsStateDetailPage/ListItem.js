@@ -1,7 +1,18 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 const ListItem = ({ itemData }) => {
+
+
+
+
+    let history = useHistory();
+
+    const historyPush = (txt) => {
+        history.push(`/marriage-laws/${txt}`);
+    }
+
     return (
         <div class="stateDetlInfo brdrRadius4 bgWhite">
             <div class="d-flex align-items-center stateName">
@@ -37,7 +48,7 @@ const ListItem = ({ itemData }) => {
                         <p class="mb-0 fontSize14 fontWeight400 primaryColor">Confidential License Fee</p>
                     </div>
                     <div class="feeBlock moreInfoBtn">
-                        <Button variant="primary" className="transition fontSize16 fontWeight700">More Info</Button>
+                        <Button variant="primary" className="transition fontSize16 fontWeight700" onClick={() => historyPush(itemData._id)}>More Info</Button>
                     </div>
                 </div>
             </div>
