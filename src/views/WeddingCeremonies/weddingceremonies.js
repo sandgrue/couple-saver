@@ -20,7 +20,7 @@ const Weddingceremonies = () => {
     <>
       <div className="bgGrey container-fluid">
         <div class="row bgWhite topSectionImage">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 posRel">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 posRel max992-md">
             <div class="sectionLeftCont">
               <div class="usMarr_breadcrumb">
                 <nav aria-label="breadcrumb">
@@ -71,7 +71,7 @@ const Weddingceremonies = () => {
         <div class="usMarr_page weddngPage">
           <div class="container">
             <div class="row">
-              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+              <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="tabPage">
                   <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -163,7 +163,7 @@ const Weddingceremonies = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12 min1199">
                 <div class="stateRightPage">
                   <div class="w-302 mb-24">
                     <BannerSmallCards
@@ -174,7 +174,7 @@ const Weddingceremonies = () => {
                   </div>
 
                   <div class="w-302 mb-24">
-                    <div class="creditScore mb-24">
+                    <div class="creditScore">
                       <img
                         class=""
                         src={
@@ -192,6 +192,40 @@ const Weddingceremonies = () => {
                     />
                   </div>
                 </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 max1199">
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-302 mb-24">
+                        <BannerSmallCards
+                          mainDivColor={"marriage_Record"}
+                          boxSpecificImage={`marrgeRecord`}
+                          boxTitle={"Marriage Records Search"}
+                        />
+                      </div>
+                  </div>  
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-302 mb-24">
+                      <div class="creditScore">
+                        <img
+                          class=""
+                          src={
+                            require(`../../assets/img/creditScore.png`).default
+                          }
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-302 mb-24">
+                      <BannerSmallCards
+                        mainDivColor={"divorce_recod"}
+                        boxSpecificImage={"wedngLaws"}
+                        boxTitle={"Divorce Records Search"}
+                      />
+                    </div>
+                  </div>
+                </div>   
               </div>
             </div>
           </div>

@@ -33,7 +33,7 @@ const AgencyDetails = () => {
                     <div class="container">
                         <div class="row">
                             {/* LEFT SIDE SECTION  */}
-                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12  mb-24">
+                            <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-24">
                                 <div class="stateLeftPage">
                                     <div class="agencyDetSummary brdrRadius4">
                                         <h2 class="fontSize32 fontWeight700 primaryColor fontFamily2">Norwalk Los Angeles County</h2>
@@ -489,7 +489,7 @@ const AgencyDetails = () => {
 
                             {/* RIght SIDE SECTION  */}
 
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12 min1199">
                                 <div class="stateRightPage">
 
                                     <CheckAvailabilityForm />
@@ -516,6 +516,45 @@ const AgencyDetails = () => {
 
 
                                 </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 max1199">
+                                <div class="stateRightPage">
+                                    <CheckAvailabilityForm />       
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 max1199">
+                                <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="w-302 mb-24">
+                                        <BannerSmallCards
+                                        mainDivColor={"marriage_Record"}
+                                        boxSpecificImage={`marrgeRecord`}
+                                        boxTitle={"Marriage Records Search"}
+                                        />
+                                    </div>
+                                </div>  
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="w-302 mb-24">
+                                    <div class="creditScore mb-24">
+                                        <img
+                                        class=""
+                                        src={
+                                            require(`../../assets/img/creditScore.png`).default
+                                        }
+                                        />
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="w-302 mb-24">
+                                    <BannerSmallCards
+                                        mainDivColor={"divorce_recod"}
+                                        boxSpecificImage={"wedngLaws"}
+                                        boxTitle={"Divorce Records Search"}
+                                    />
+                                    </div>
+                                </div>
+                                </div>   
                             </div>
                         </div>
                     </div>

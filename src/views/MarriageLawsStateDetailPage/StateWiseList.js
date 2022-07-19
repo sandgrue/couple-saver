@@ -3,8 +3,9 @@ import ListItem from './ListItem'
 import StateWIseSearchSection from './StateWIseSearchSection'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import { Dropdown } from 'bootstrap'
+import { isItNull } from '../../Functions/functions'
 
-const StateWiseList = () => {
+const StateWiseList = ({ countyName, listData }) => {
 
 
     return (
@@ -14,8 +15,8 @@ const StateWiseList = () => {
             <div clas="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="d-flex align-items-end">
                     <div class="pageTitle mb-0">
-                        <h1 class="fontSize32 fontWeight700 primaryColor fontFamily2">Los Angeles</h1>
-                        <p class="mb-0 fontSize16 fontWeight400 primaryColor">Find agents/authorities office that provide marriage license for you in Los Angeles</p>
+                        <h1 class="fontSize32 fontWeight700 primaryColor fontFamily2">{countyName}</h1>
+                        <p class="mb-0 fontSize16 fontWeight400 primaryColor">Find agents/authorities office that provide marriage license for you in {countyName}</p>
                     </div>
                     <div class="ms-auto sortingBlock">
                         <p class="mb-0 fontWeight400 fontSize10">Sort by</p>
@@ -37,6 +38,7 @@ const StateWiseList = () => {
 
             {/* List  */}
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                {/* <ListItem />
                 <ListItem />
                 <ListItem />
                 <ListItem />
@@ -46,10 +48,23 @@ const StateWiseList = () => {
                 <ListItem />
                 <ListItem />
                 <ListItem />
-                <ListItem />
-                <ListItem />
+                <ListItem /> */}
+                {
+
+                    isItNull(listData) === false ?
+
+
+                        listData.map(
+                            (item, index) => (
+                                <ListItem itemData={item} />
+                            )
+                        )
+                        :
+                        null
+                }
             </div>
-            <StateWIseSearchSection />
+            <StateWIseSearchSection countyName={countyName} />
+
 
         </>
     )

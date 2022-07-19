@@ -77,7 +77,6 @@ const apiConnector = (apiKeyName, data) => {
     requestObject.url = injectParamsToUrl(requestObject.url, data);
     return axios(requestObject)
         .then(function (result) {
-            apiFailCounter = 0;
             return result.data;
         })
         .catch(function (error) {

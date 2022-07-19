@@ -270,7 +270,9 @@
   font-weight: 600;
   text-decoration: none;
 }
-
+.usMarr_navBar .navbar .navbar-nav .nav-item a:hover{
+  color: #F16B64;
+}
 .usMarr_navBar .navbar .navbar-nav .nav-item {
   color: #1A1846;
   padding: 0rem;
@@ -1124,10 +1126,11 @@ span.crossBox {
 
 /*--agency detail--*/
 .agencyDetSummary {
-  border: 1px solid rgba(26, 24, 70, 0.1);
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
-  padding: 24px;
-  margin-bottom: 40px;
+	border: 1px solid rgba(26, 24, 70, 0.1);
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+	padding: 24px;
+	margin-bottom: 40px;
+	background-color: #fff;
 }
 
 .otherInfo {
@@ -1275,11 +1278,6 @@ ul.accordionListing {
   margin-bottom: 0;
 }
 
-
-.mb-24 {
-  margin-bottom: 24px;
-}
-
 .bgImage img {
   object-fit: cover;
   width: 100%;
@@ -1312,4 +1310,10 @@ ul.accordionListing {
 
 .childAcc .accordion-item {
   border: 1px solid rgba(26, 24, 70, 0.1);
+}
+.identifictnList img {
+	max-width: 100%;
+}
+.topNavbr img {
+	max-width: 100%;
 }

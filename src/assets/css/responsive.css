@@ -1,0 +1,344 @@
+@media (min-width: 270px) and (max-width: 366.99px){
+    .stateDetlInfo {
+        padding: 10px;
+    }
+    .topSectionImage {
+        height: 400px;
+    }
+    .weddngCeremonyPge h1 {
+        font-size: 26px !important;
+    }  
+    .topNavbr a img {
+        max-width: 100%;
+    }
+    .bannerContent {
+        left: 5px;
+        right: 5px;
+    }
+    .orangeBtn {
+        padding: 5px 10px;
+    }
+    .advertisemntSec img {
+        max-width: 100%;
+    }
+    .fontSize32 {
+        font-size: 21px;
+    }
+    .fontSize16 {
+        font-size: 14px;
+    }
+    .licenseList span img {
+        max-width: 18px;
+    }
+    .licenseList {
+        width: 100%;
+    }
+    .licenseList span {
+        width: 20%;
+    }
+    .licenseList h4 {
+        width: 80%;
+    }
+    .footerLowrLinks li{
+        margin-left: 0px;
+    }
+}
+@media only screen and (max-width: 575.99px){
+    .getHelp.brdrRadius4.d-flex.align-items-center {
+        display: block !important;
+    }
+    .helpText {
+        margin-top: 16px;
+    }
+    .orangeBtn {
+        margin-left: 0 !important;
+        margin-top: 16px;
+    }
+    .usMarr_searchBar .orangeBtn {
+        margin-top: 0px !important;
+    }
+    .marrLicense {
+        padding: 40px 0;
+    }
+    .footerLowrLinks li:first-child {
+        margin-left: 0px;
+    }
+    .footerLowrLinks {
+        padding-left: 0px;
+    }
+    .marginBotomFooter .d-flex{
+        display: block !important;
+        width: 100%;
+    }
+    .usMarr_footer {
+        padding: 40px;
+    }
+    .footeLinks {
+        margin-top: 16px;
+    }
+    .stateListTitle {
+        margin-bottom: 16px;
+    }
+    .procedureListNum {
+        margin-bottom: 16px;
+    }
+    .topLogoAdvertise{
+        display: none;
+    }
+    .footerLogo {
+        margin-bottom: 16px;
+    }  
+    .height-264,.creditScore {
+        margin-top: 16px;
+    }  
+    .identifictnList {
+        margin-bottom: 16px;
+    }
+    .licenseList {
+        width: 100%;
+    }
+    .licenseList span {
+        width: 20%;
+    }
+    .licenseList h4 {
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 992px){
+    .leftPadding991-0{
+        padding-left: 0;
+    }
+    .rightPadding991-0{
+        padding-right: 0;
+    }
+}
+@media only screen and (min-width: 576px){
+    .bannerSection {
+        margin-bottom: 8px;
+    }    
+}
+@media only screen and (max-width: 991.99px){ 
+    .collapse.navbar-collapse.show {
+        position: absolute;
+        top: 65px;
+        background-color: #fff;
+        padding: 16px;
+        max-width: 100%;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.08);
+        z-index: 99;
+    }  
+    .collapse.navbar-collapse.show ul li {
+        margin-bottom: 16px;
+    }
+    .collapse.navbar-collapse.show ul li:last-child {
+        margin-bottom: 0px;
+    }
+    .topLogoAdvertise img {
+        width: 100%;
+    }
+}
+@media (min-width: 575px) and (max-width: 991.99px){
+    .collapse.navbar-collapse.show{
+        width: 350px;
+    }
+    .w-302 {
+        width: 100%;
+        height: 216px;
+    }
+    .creditScore img {
+        width: 100%;
+        height: 216px;
+    }
+}
+@media (min-width: 365px) and (max-width: 575.99px){ 
+    .weddngCeremonyPge h1 {
+        font-size: 26px !important;
+    }   
+    .topSectionImage {
+        height: 350px;
+    }
+    .bannerContent {
+        left: 10px;
+        right: 10px;
+    }
+    .advertisemntSec img {
+        width: 100%;
+    }
+    .footerLogo {
+        margin-bottom: 16px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.99px){
+    .topSectionImage {
+        height: 400px;
+    }
+    .footerLogo {
+        margin-bottom: 16px;
+    }
+    .stateListTitle {
+        margin-bottom: 16px;
+    }
+    .procedureListNum {
+        margin-bottom: 16px;
+    }
+    .bannerContent {
+        left: 10px;
+        right: 10px;
+    }
+    .topNavbr a img {
+        max-width: 100px;
+        margin-right: 16px;
+    }
+    .advertisemntSec img {
+        max-width: 100%;
+    }
+    .fontSize16 {
+        font-size: 13px;
+    }
+}
+@media (min-width: 768px) and (max-width: 990.99px){
+    .advertisemntSec.text-center img {
+        width: 100%;
+    }
+    .fontSize16 {
+        font-size: 14px;
+    }
+    .topNavbr a img {
+        max-width: 140px;
+        margin-right: 16px;
+    }
+    .licenseList span img {
+        max-width: 25px;
+    }
+    .licenseList span {
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        line-height: 38px;
+    }
+    .fontSize18 {
+        font-size: 15px;
+    }
+    .fontSize32 {
+        font-size: 26px;
+    }
+    .fontSize14 {
+        font-size: 12px;
+    }
+    .procedureListNum p.procedrePara {
+        line-height: 19.5px;
+    }
+}
+@media (min-width: 991px) and (max-width: 1199.99px){
+    .topNavbr a img {
+        max-width: 200px;
+    }
+    .bannerContent {
+        left: 10px;
+        right: 10px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399.99px){
+    .bannerContent {
+        left: 20px;
+        right: 20px;
+    }
+}
+@media only screen and (max-width: 1400px){
+
+}
+@media only screen and (max-width: 1199.99px){
+    .min1199{
+        display: none;
+    }
+    .max1199{
+        display: block;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .max1199{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767.99px){
+    .d-flex.align-items-center.stateDel {
+        display: block !important;
+    }
+    .feeBlock {
+        margin-left: 0;
+        margin-right: 20px;
+        margin-top: 16px;
+    }
+    .leftTabList, .max1199 {
+        display: none;
+    }
+    .marginTop767{
+        margin-top: 16px;
+    }
+}
+@media only screen and (max-width: 575px){    
+    .sectionLeftCont {
+        padding-left: 0px;
+    }
+    .footerSearch {
+        height: 100%;
+        padding: 10px;
+    }
+    .childAcc .accordion-item {
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .bgImage {
+        width: 550px;
+    }
+}
+@media only screen and (max-width: 991.99px){
+    .stateListing li a {
+        font-size: 12px;
+    }
+    .staterightInfo  .fontSize14, .stateleftInfo .fontSize14 {
+        font-size: 12px;
+    }
+    .moreInfoBtn button, .btn-primary:focus {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    .orangeBtn {
+        padding: 13px 7px;
+        height: auto;
+        margin-left: 16px;
+        font-size: 12px;
+    }
+    .topSectionImage {
+        position: relative;
+        height: auto;
+    }
+    .weddngCeremonyPge {
+        position: relative;
+        top: auto;
+        transform: inherit;
+    }
+    .weddngCeremonyPge h1 {
+        font-size: 30px;
+    }
+    .pageTitle.weddngCeremonyPge {
+        padding-right: 0px;
+    }
+    .weddngCeremonyPge h1 {
+        font-size: 42px;
+    }
+    .bgImage {
+        display: none;
+    }
+    .max992-md{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+@media (min-width: 1199.99px) and (max-width: 1399.99px){
+    .stateRightPage .w-302 {
+        width: 100%;
+        height: 261px;
+    }
+}
