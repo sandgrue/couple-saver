@@ -46,7 +46,7 @@ function App() {
 
 
                             {/* api wale pages */}
-                            <Route path="/marriage-laws/los-angeles/norwalklosangeles" exact component={AgencyDetails} />
+                            <Route path="/marriage-laws/:agencyId" exact component={AgencyDetails} />
                             <Route path="/state/:countyName" exact component={StateDetailPage} />
 
 

@@ -8,4 +8,9 @@ export default {
             pagination: ''
         }
     },
+    agencyDetail: {
+        url: '/customer/get-content?_id=:agencyID',
+        method: 'GET',
+        data: {}
+    }
 }
