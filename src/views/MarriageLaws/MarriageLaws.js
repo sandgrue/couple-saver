@@ -65,7 +65,7 @@ const MarriageLaws = () => {
               </p>
             </div>
             <div class="row">
-              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+              <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="tabPage">
                   <div class="row">
                     <div class="longSearchBar">
@@ -353,7 +353,7 @@ const MarriageLaws = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12 min1199">
                 <div class="stateRightPage">
                   <div class="w-302 mb-24">
                     <BannerSmallCards
@@ -362,7 +362,6 @@ const MarriageLaws = () => {
                       boxTitle={"Marriage Records Search"}
                     />
                   </div>
-
                   <div class="w-302 mb-24">
                     <div class="creditScore mb-24">
                       <img
@@ -373,7 +372,6 @@ const MarriageLaws = () => {
                       />
                     </div>
                   </div>
-
                   <div class="w-302 mb-24">
                     <BannerSmallCards
                       mainDivColor={"divorce_recod"}
@@ -382,6 +380,40 @@ const MarriageLaws = () => {
                     />
                   </div>
                 </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 max1199">
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-302 mb-24">
+                        <BannerSmallCards
+                          mainDivColor={"marriage_Record"}
+                          boxSpecificImage={`marrgeRecord`}
+                          boxTitle={"Marriage Records Search"}
+                        />
+                      </div>
+                  </div>  
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-302 mb-24">
+                      <div class="creditScore mb-24">
+                        <img
+                          class=""
+                          src={
+                            require(`../../assets/img/creditScore.png`).default
+                          }
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-302 mb-24">
+                      <BannerSmallCards
+                        mainDivColor={"divorce_recod"}
+                        boxSpecificImage={"wedngLaws"}
+                        boxTitle={"Divorce Records Search"}
+                      />
+                    </div>
+                  </div>
+                </div>   
               </div>
             </div>
           </div>

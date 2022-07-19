@@ -11,9 +11,9 @@ const MainBanner = () => {
         <div class="row">
           <BigBannerWIthSearch />
 
-          <div class="col-lg-5 pl-0">
+          <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12 leftPadding991-0">
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pr-0">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 rightPadding991-0">
                 <BannerSmallCards
                   mainDivColor={"marriage_Record height-264"}
                   boxSpecificImage={`marrgeRecord`}
@@ -21,7 +21,7 @@ const MainBanner = () => {
                 />
               </div>
 
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pr-0">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 rightPadding991-0">
                 <div class="creditScore">
                   <img
                     class="w-100"
@@ -30,7 +30,7 @@ const MainBanner = () => {
                 </div>
               </div>
 
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pr-0">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 rightPadding991-0">
                 <BannerSmallCards
                   mainDivColor={"wedding_laws height-264 mb-0"}
                   boxSpecificImage={"court"}
@@ -38,7 +38,7 @@ const MainBanner = () => {
                 />
               </div>
 
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pr-0">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 rightPadding991-0">
                 <BannerSmallCards
                   mainDivColor={"divorce_recod height-264 mb-0"}
                   boxSpecificImage={"wedngLaws"}

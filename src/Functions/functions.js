@@ -138,3 +138,42 @@ export const removeAllSpaces = (str) => {
 export const scrollToLink = (id) => {
     window.scrollTo(0, parseFloat(getCardLb(id)) - 200);
 }
+
+
+
+export const removeDash = (str) => {
+    return str.replace("-", " ");
+}
+
+export const addDash = (str) => {
+    return str.replace(" ", "-");
+}
+
+
+
+export const isItNull = (data) => {
+    if (data === undefined || data === null || data === '' || data.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+export let capitalise = (str) => {
+
+    if (str === undefined || str === '' || typeof (str) == "number") {
+        return;
+    }
+    
+    let str1 = str.toLowerCase();
+
+    const arr = str1.split(" ");
+
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+
+    }
+    const str2 = arr.join(" ");
+    return str2;
+}

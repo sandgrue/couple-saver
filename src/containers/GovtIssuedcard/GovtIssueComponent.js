@@ -8,7 +8,7 @@ const GovtIssueComponent = () => {
                 <div class="container">
                     <div class="govrnmntIdntificatn brdrRadius4">
                         <div class="row justify-content-md-center">
-                            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <h1 class="fontSize32 text-center fontFamily2">Government Issued Identification</h1>
                                 <div class="row">
 
