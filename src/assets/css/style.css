@@ -303,7 +303,7 @@
   background-repeat: no-repeat;
   height: 536px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .bannerSection::after {
@@ -1316,4 +1316,45 @@ ul.accordionListing {
 }
 .topNavbr img {
 	max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.serachDatadrop {
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  left: 0;
+  margin-top: 10px;
+  padding-left: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #00000024;
+  z-index: 9;
+}
+
+.serachDatadrop p {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+
+
+.bannerContent .usMarr_searchBar {
+  position: relative;
 }
