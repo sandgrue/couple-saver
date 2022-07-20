@@ -1317,44 +1317,51 @@ ul.accordionListing {
 .topNavbr img {
 	max-width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
+/*--searchBar--*/
 .serachDatadrop {
-  background: #fff;
-  position: absolute;
-  width: 100%;
-  text-align: left;
-  left: 0;
-  margin-top: 10px;
-  padding-left: 0;
-  border-radius: 4px;
-  box-shadow: 0 0 4px #00000024;
-  z-index: 9;
+	background: #fff;
+	position: absolute;
+	width: 100%;
+	text-align: left;
+	left: 0;
+	margin-top: 10px;
+	padding: 16px;
+	border-radius: 4px;
+	box-shadow: 0 0 4px #00000024;
+	z-index: 9;
+	max-height: 250px;
+	overflow: auto;
 }
-
 .serachDatadrop p {
   margin-top: 0;
   margin-bottom: 0;
-
   cursor: pointer;
   padding-top: 0;
   padding-bottom: 0;
-
   font-size: 14px;
   font-weight: 500;
   border-radius: 4px;
 }
-
-
-
 .bannerContent .usMarr_searchBar {
   position: relative;
+}
+.serachDatadrop p {
+	margin-bottom: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+.serachDatadrop p:last-child {
+	margin-bottom: 0px;
+}
+.serachDatadrop p a{
+  text-decoration: none;
+}
+.listItemBlock a span {
+	color: #1A1846;
+}
+.listItemBlock a span:hover {
+	color: #F16B64;
+}
+.serachDatadrop p a:first-child{
+  color: #3db675;
 }

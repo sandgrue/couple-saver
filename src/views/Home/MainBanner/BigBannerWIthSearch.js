@@ -165,9 +165,9 @@ const BigBannerWIthSearch = () => {
                                                         searchResult.map(
                                                             (item, index) => {
                                                                 return (
-                                                                    <p className='secondaryColor w-100 d-block'>
-                                                                        <Link className='secondaryColor w-100 d-flex align-items-center' to={`/state/${addDash(item.county_name)}`}>
-                                                                            <span className='secondaryColor w-100 d-block'>
+                                                                    <p className='d-block listItemBlock'>
+                                                                        <Link className='searchListitem d-flex align-items-center' to={`/state/${addDash(item.county_name)}`}>
+                                                                            <span className='d-block'>
                                                                                 {item.county_name}, {item.state_abbr.toUpperCase()}
                                                                             </span>
                                                                         </Link>
