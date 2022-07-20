@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Navbar } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
+import { toggleIconId } from '../constants/constants';
 
 // import '../assets'
 
@@ -9,7 +10,7 @@ const NavBar = () => {
     const loca = window.location.href;
 
 
-    const [scrolled, setScrolled] = React.useState(false);
+    // const [scrolled, setScrolled] = React.useState(false);
 
     // const handleScroll = () => {
     //     const offset = window.scrollY;
@@ -25,13 +26,31 @@ const NavBar = () => {
     //     window.addEventListener('scroll', handleScroll)
     // })
 
-    let x = ['navbarTop transition'];
+    // let x = ['navbarTop transition'];
     // if (scrolled) {
     //     x.push('scrolled');
     // }
 
 
     const [ariaexpanded, setariaexpanded] = useState(false);
+
+    // useEffect(() => {
+    window.onclick = e => {
+        console.log(e.target.id, "FIRSTS");
+        // setariaexpanded(false);
+
+        if (e.target.id == toggleIconId) {
+            // setcurrentClickedElement(searchInputBox);
+            // setisInputActive(true);
+        } else {
+            setariaexpanded(false);
+            // setcurrentClickedElement('');
+        }
+
+    }
+    // }, [])
+
+
     const toggle = () => {
         setariaexpanded(!ariaexpanded);
     }
@@ -62,9 +81,11 @@ const NavBar = () => {
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container-fluid">
                             <button class="navbar-toggler" type="button">
-                                <span class="navbar-toggler-icon" onClick={() => { toggle() }}></span>
+                                <span class="navbar-toggler-icon"
+                                    onClick={() => { toggle() }}
+                                    id={toggleIconId}></span>
                             </button>
-                            <div class={`collapse navbar-collapse ${ariaexpanded ? 'show' : null}`}>
+                            <div class={`collapse navbar-collapse ${ariaexpanded ? 'show' : ''}`}>
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
                                         <NavLink exact activeClassName="navLinksActiveclass" to="/marriage-laws">Marriage Laws</NavLink>
@@ -79,7 +100,6 @@ const NavBar = () => {
                                         <NavLink exact activeClassName="navLinksActiveclass" to="/wedding-ceremonies">Wedding Ceremonies</NavLink>
                                     </li>
                                 </ul>
-                                
                             </div>
                             <div class='navbar-text socialIcons'>
                                 <ul class="list-group list-group-horizontal">

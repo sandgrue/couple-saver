@@ -15,6 +15,8 @@ import MarriageLaws from "./views/MarriageLaws/MarriageLaws.js";
 import AgencyDetails from "./views/AgencyDetails/AgencyDetails.js";
 
 
+import ScrollToTop from '../src/containers/ScrollToTop.js'
+
 
 
 
@@ -27,10 +29,12 @@ function App() {
         <>
             <div class="wrapper">
                 <Router>
-                    <NavBar />
-                    <div class='heightCalc'>
-                        <Switch>
-                            {/* <Route path="/" exact component={Home} />
+
+                    <ScrollToTop>
+                        <NavBar />
+                        <div class='heightCalc'>
+                            <Switch>
+                                {/* <Route path="/" exact component={Home} />
                             <Route path="/marriage-laws" exact component={MarriageLaws} />
                             <Route path="/marriage-laws/los-angeles/norwalklosangeles" exact component={AgencyDetails} />
                             <Route path="/state" exact component={StateDetailPage} />
@@ -39,26 +43,29 @@ function App() {
                             <Route path="/wedding-ceremonies" exact component={Weddingceremonies} /> */}
 
 
-                            <Route path="/" exact component={Home} />
+                                <Route path="/" exact component={Home} />
 
 
-                            <Route path="/marriage-laws" exact component={MarriageLaws} />
+                                <Route path="/marriage-laws" exact component={MarriageLaws} />
 
 
-                            {/* api wale pages */}
-                            <Route path="/marriage-laws/:agencyId" exact component={AgencyDetails} />
-                            <Route path="/state/:countyName" exact component={StateDetailPage} />
+                                {/* api wale pages */}
+                                <Route path="/marriage-laws/:agencyId" exact component={AgencyDetails} />
+                                <Route path="/state/:countyName" exact component={StateDetailPage} />
 
 
-                            {/* static pages */}
-                            <Route path="/family-laws" exact component={FamilyLaws} />
-                            <Route path="/immigration-laws" exact component={ImmigrationLaws} />
-                            <Route path="/wedding-ceremonies" exact component={Weddingceremonies} />
+                                {/* static pages */}
+                                <Route path="/family-laws" exact component={FamilyLaws} />
+                                <Route path="/immigration-laws" exact component={ImmigrationLaws} />
+                                <Route path="/wedding-ceremonies" exact component={Weddingceremonies} />
 
 
-                        </Switch>
-                        <Footer />
-                    </div>
+                            </Switch>
+                            <Footer />
+                        </div>
+
+
+                    </ScrollToTop>
                 </Router>
             </div>
         </>
