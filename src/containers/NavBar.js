@@ -36,7 +36,7 @@ const NavBar = () => {
 
     // useEffect(() => {
     window.onclick = e => {
-        console.log(e.target.id, "FIRSTS");
+        // console.log(e.target.id, "FIRSTS");
         // setariaexpanded(false);
 
         if (e.target.id == toggleIconId) {

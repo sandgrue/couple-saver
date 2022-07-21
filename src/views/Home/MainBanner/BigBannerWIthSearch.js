@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom';
 import apiConnector from '../../../backendConnect/apiService';
 import { searchInputBox, SUCCESS } from '../../../constants/constants';
-import { addDash } from '../../../Functions/functions';
+import { addDash, isItNull } from '../../../Functions/functions';
 
 // import '../../../../../assets'
 
@@ -44,18 +44,24 @@ const BigBannerWIthSearch = () => {
     // const [currentClickedElement, setcurrentClickedElement] = useState('');
     const [isInputActive, setisInputActive] = useState(false);
 
-    useEffect(() => {
-        window.onclick = e => {
-            // console.log(e.target.id, "FIRST");
-            if (e.target.id == searchInputBox) {
-                // setcurrentClickedElement(searchInputBox);
-                setisInputActive(true);
-            } else {
-                setisInputActive(false);
-                // setcurrentClickedElement('');
-            }
+    // useEffect(() => {
+    window.onclick = e => {
+        // console.log(e.target.id, "FIRST");
+        if (e.target.id == searchInputBox) {
+            // setcurrentClickedElement(searchInputBox);
+            setisInputActive(true);
+        } else {
+            setisInputActive(false);
+            // setcurrentClickedElement('');
         }
-    }, []);
+    }
+    // }, []);
+
+
+    useEffect(() => {
+        console.log(isInputActive, "IS INPUT ACTIVE");
+    }, [isInputActive])
+
 
 
 
@@ -64,26 +70,31 @@ const BigBannerWIthSearch = () => {
 
 
     useEffect(() => {
-        if (searchText === '' || searchText === null || searchText.length === 0) {
+        if (searchText === '' || searchText === null || searchText.length === 0 || isItNull(searchText)) {
             setsearchResult([]);
         } else {
-            let data = {
-                search: searchText,
-                page: 1,
-                pagination: 10
+
+            if (isItNull(searchText)) {
+                setsearchResult([]);
+            } else {
+                let data = {
+                    search: searchText,
+                    page: 1,
+                    pagination: 10
+                }
+                apiConnector("searchResult", data)
+                    .then((res) => {
+                        if (res.status === SUCCESS) {
+                            console.log(res, "working");
+                            setsearchResult(res.data.result)
+                        } else {
+                            console.log("API failure", 'working');
+                        }
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
             }
-            apiConnector("searchResult", data)
-                .then((res) => {
-                    if (res.status == SUCCESS) {
-                        console.log(res, "working");
-                        setsearchResult(res.data.result)
-                    } else {
-                        console.log("API failure", 'working');
-                    }
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
         }
     }, [searchText]);
 
@@ -91,7 +102,7 @@ const BigBannerWIthSearch = () => {
 
     const [latlngdata, setlatlngdata] = useState();
 
-    let latlngurl = 'https://pro.ip-api.com/json?key=JQ2bhI11BHF1bzV';
+    const latlngurl = 'https://pro.ip-api.com/json?key=JQ2bhI11BHF1bzV';
 
     useEffect(() => {
         const fetchData = async () => {
@@ -105,7 +116,15 @@ const BigBannerWIthSearch = () => {
         fetchData();
     }, [latlngurl]);
 
-    console.log(latlngdata, "FIRST");
+
+
+
+    useEffect(() => {
+
+    }, [searchResult])
+
+
+    // console.log(latlngdata, "FIRST");
 
     return (
         <>
@@ -146,11 +165,6 @@ const BigBannerWIthSearch = () => {
                                                                 </span>
                                                             </p>
                                                     }
-                                                    {/* <p className='secondaryColor w-100 d-block'>
-                                                        <span className='secondaryColor w-100 d-block'>
-                                                            No County Found with <b className='font-weight999' >{searchText}</b> name
-                                                        </span>
-                                                    </p> */}
                                                 </>
                                                 :
                                                 <>
