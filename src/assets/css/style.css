@@ -177,6 +177,10 @@
   padding: 0 !important;
 }
 
+.pd-10 {
+  padding: 10px;
+}
+
 .pl-0 {
   padding-left: 0;
 }
@@ -270,9 +274,11 @@
   font-weight: 600;
   text-decoration: none;
 }
-.usMarr_navBar .navbar .navbar-nav .nav-item a:hover{
+
+.usMarr_navBar .navbar .navbar-nav .nav-item a:hover {
   color: #F16B64;
 }
+
 .usMarr_navBar .navbar .navbar-nav .nav-item {
   color: #1A1846;
   padding: 0rem;
@@ -1126,11 +1132,11 @@ span.crossBox {
 
 /*--agency detail--*/
 .agencyDetSummary {
-	border: 1px solid rgba(26, 24, 70, 0.1);
-	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
-	padding: 24px;
-	margin-bottom: 40px;
-	background-color: #fff;
+  border: 1px solid rgba(26, 24, 70, 0.1);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 40px;
+  background-color: #fff;
 }
 
 .otherInfo {
@@ -1311,27 +1317,31 @@ ul.accordionListing {
 .childAcc .accordion-item {
   border: 1px solid rgba(26, 24, 70, 0.1);
 }
+
 .identifictnList img {
-	max-width: 100%;
+  max-width: 100%;
 }
+
 .topNavbr img {
-	max-width: 100%;
+  max-width: 100%;
 }
+
 /*--searchBar--*/
 .serachDatadrop {
-	background: #fff;
-	position: absolute;
-	width: 100%;
-	text-align: left;
-	left: 0;
-	margin-top: 10px;
-	padding: 16px;
-	border-radius: 4px;
-	box-shadow: 0 0 4px #00000024;
-	z-index: 9;
-	max-height: 250px;
-	overflow: auto;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  left: 0;
+  margin-top: 10px;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #00000024;
+  z-index: 9;
+  max-height: 250px;
+  overflow: auto;
 }
+
 .serachDatadrop p {
   margin-top: 0;
   margin-bottom: 0;
@@ -1342,26 +1352,84 @@ ul.accordionListing {
   font-weight: 500;
   border-radius: 4px;
 }
+
 .bannerContent .usMarr_searchBar {
   position: relative;
 }
+
 .serachDatadrop p {
-	margin-bottom: 16px;
+  margin-bottom: 16px;
   cursor: pointer;
   display: inline-block;
 }
+
 .serachDatadrop p:last-child {
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
-.serachDatadrop p a{
+
+.serachDatadrop p a {
   text-decoration: none;
 }
+
 .listItemBlock a span {
-	color: #1A1846;
+  color: #1A1846;
 }
+
 .listItemBlock a span:hover {
-	color: #F16B64;
+  color: #F16B64;
 }
-.serachDatadrop p a:first-child{
+
+.serachDatadrop p a:first-child {
   color: #3db675;
 }
+
+
+
+
+
+
+
+
+#scrollTopButton {
+  display: inline-block;
+  /* background-color: #2a276d; */
+  background-color: #F16B64;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  /* opacity: 0;
+  visibility: hidden; */
+  z-index: 1000;
+}
+
+/* #scrollTopButton::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+} */
+
+#scrollTopButton:hover {
+  cursor: pointer;
+  /* background-color: #333; */
+  background-color: #2a276d;
+}
+
+#scrollTopButton:active {
+  background-color: #555;
+  /* background-color: rgb(241, 227, 227); */
+}
+
+/* #scrollTopButton.show {
+  opacity: 1;
+  visibility: visible;
+} */
