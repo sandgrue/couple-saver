@@ -16,13 +16,20 @@ import AgencyDetails from "./views/AgencyDetails/AgencyDetails.js";
 
 
 import ScrollToTop from '../src/containers/ScrollToTop.js'
+import { useScrollPositionHook } from "./Functions/functions.js";
 
-
+// import '../src/assets'
 
 
 function App() {
 
 
+    const scrollPos = useScrollPositionHook();
+    const scrollTOTOP = () => {
+        // if (scrollPos > 100) {
+        window.scrollTo(0, 0);
+        // }
+    }
 
 
     return (
@@ -62,10 +69,21 @@ function App() {
 
                             </Switch>
                             <Footer />
+                            {
+                                scrollPos > 70 ?
+                                    <a id="scrollTopButton" onClick={scrollTOTOP}>
+                                        <img className="pd-10" src={require('../src/assets/img/uparrow1.svg').default} />
+                                    </a>
+                                    :
+                                    null
+                            }
+
                         </div>
 
 
                     </ScrollToTop>
+
+
                 </Router>
             </div>
         </>
