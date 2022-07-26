@@ -1088,7 +1088,7 @@ span.crossBox {
   background-repeat: no-repeat;
   height: 320px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 87px;
 }
 
@@ -1233,7 +1233,7 @@ textarea.form-control:focus {
 }
 
 .posRel {
-  position: relative;
+  position: relative !important;
 }
 
 .weddngCeremonyPge {
@@ -1427,6 +1427,13 @@ ul.accordionListing {
 #scrollTopButton:active {
   background-color: #555;
   /* background-color: rgb(241, 227, 227); */
+}
+
+
+
+.usMarr_searchBar {
+  z-index: 999;
+  position: relative;
 }
 
 /* #scrollTopButton.show {
