@@ -61,7 +61,7 @@ export const immigrationLawsParaContent = [
 
             'To begin the process, your American spouse would petition to US immigration on your behalf for an immigrant visa. About 17 countries currently have a US Immigration field office at the embassy or consulate; in those countries, your spouse would provide your contact address and the US embassy or consulate would contact you to continue the application process. In other countries, you would communicate by postal mail with a central stateside processing center (“stateside” means within the continental US.)',
 
-            'Once the petition is filed, you are eligible to apply for a nonimmigrant visa which would allow you to enter the US, live with your spouse and work while the petition for your immigrant visa is being processed. If your immigrant visa was later denied, you would have to return to your home country when your nonimmigrant visa expired. You can also choose to wait in your home country while the petition for your immigrant visa is being processed.',
+            'Once the petition is filed, you are eligible to apply for a nonimmigrant visa which would allow you to enter the US, live with your spouse and work while the petition for your immigrant visa is being processed. If your immigrant visa was later denied, you would have to return to your home country.','When your nonimmigrant visa expired. You can also choose to wait in your home country while the petition for your immigrant visa is being processed.',
 
 
             'When your petition is approved, your US citizen spouse, who is now also your immigration sponsor, submits an affidavit of support, accepting financial responsibility for you during the immigration process. Personal information such as your legal name, birthdate, nationality, passport details, and so on, are submitted at that time. You may also need a medical examination by a physician, including vaccinations for certain contagious diseases. US Immigration will tell you if other documents or information are required.',
@@ -104,7 +104,7 @@ export const docsForGreenCrdContent = {
                 'Social security card (if any)',
                 'Divorce certificate and all divorce papers (if married before)',
                 'Birth certificate (with English translation if in foreign language)',
-                'Income tax return from last year',
+                // 'Income tax return from last year',
                 'Two passport-size photos',
                 'Medical report from INS-designated civil surgeon'
             ]
@@ -129,7 +129,7 @@ export const prepForIntrvw = {
                 'Social Security card (if any)',
                 'Employment card or advance parole document',
                 'Current Marriage Certificate (if you have already married)',
-                'Income tax return from last year',
+                // 'Income tax return from last year',
                 'Divorce certificate and all divorce papers (if married before)',
                 'Birth certificates of children born in this marriage (if any)'
             ]
@@ -433,7 +433,7 @@ export const MarriageWaitingPeriodAfterApplication = {
         },
         {
             heading: '3 days',
-            AccList: ['Alaska', 'District of Columbia', 'Florida (upon completion of a pre-marital preparation course)', 'Kansas', 'Massachusetts', 'Michigan', 'New Jersey', 'New Jersey', 'Oregon', 'Pennsylvania', 'Washington']
+            AccList: ['Alaska', 'District of Columbia', 'Florida (upon completion of a pre-marital preparation course)', 'Kansas', 'Massachusetts', 'Michigan', 'New Jersey', 'Oregon', 'Pennsylvania', 'Washington']
         },
         {
             heading: '5 days',
@@ -494,7 +494,7 @@ export const MarriageAgeRequirements = {
     list: [
         'In the United States, all but one state requires that a couple be <b>18</b> in order to marry without parental permission.',
         'Nebraska sets the age of majority at <b>19</b>. Although a few states will waive this requirement if there is a pregnancy, the couple may still have to have court approval.',
-        'Delware, Florida, Georgia, Kentucky, Maryland, and Oklahoma: Allow <b>pregnant teens</b> or teens who have already had a child to get married without parental consent.',
+        'Delware, Florida, Georgia, Kentucky, Maryland, and Oklahoma:<br/> Allow <b>pregnant teens</b> or teens who have already had a child to get married without parental consent.',
         'However in Florida, Kentucky, and Oklahoma, the young couple <b>must have authorization</b> from a court.',
         'Maryland requires that the minor be <b>at least 16</b>. Even with parental approval, many states will require court approval when a person is <b>16</b> years of age or less.'
     ]
@@ -513,18 +513,18 @@ export const CousinMarriages = {
     list: [
         'All states allow the marriage of second cousins.',
 
-        'Twenty states (20) and the District of Columbia allow first-cousins to marry:  Alabama, Alaska, California, Colorado, Connecticut, Florida, Georgia, Hawaii, Maryland, Massachusetts, Missouri, New Jersey, New Mexico, New York, North Carolina, Rhode Island, South Carolina, Tennessee, Vermont, Virginia',
+        'Twenty states (20) and the District of Columbia allow first-cousins to marry:<br/>  Alabama, Alaska, California, Colorado, Connecticut, Florida, Georgia, Hawaii, Maryland, Massachusetts, Missouri, New Jersey, New Mexico, New York, North Carolina, Rhode Island, South Carolina, Tennessee, Vermont, Virginia',
 
-        'Six (6) states permit first-cousin marriage only under certain circumstances:  Arizona, Illinois, Indiana, Maine, Utah, Wisconsin.',
+        'Six (6) states permit first-cousin marriage only under certain circumstances:<br/>  Arizona, Illinois, Indiana, Maine, Utah, Wisconsin.',
 
-        'Twenty-four (24) states prohibit marriages between first-cousins:  Arkansas, Delaware, Idaho, Iowa, Kansas, Kentucky, Louisiana, Michigan, Minnesota, Mississippi, Nebraska, Nevada, New Hampshire, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, South Dakota, Texas, Washington, West Virginia, Wyoming'
+        'Twenty-four (24) states prohibit marriages between first-cousins: <br/>  Arkansas, Delaware, Idaho, Iowa, Kansas, Kentucky, Louisiana, Michigan, Minnesota, Mississippi, Nebraska, Nevada, New Hampshire, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, South Dakota, Texas, Washington, West Virginia, Wyoming'
     ]
 }
 
 
 export const CommonLawMarriages = {
     title: 'Common Law Marriages',
-    list: ['States that recognize these marriages:  Alabama, Colorado, District of Columbia, Georgia (if created before 1/1/97), Idaho (if created before 1/1/96), Iowa, Kansas, Montana, New Hampshire (for inheritance purposes only, and the recognition begins only after the first spouse dies.), Ohio (if created before 10/10/91), Oklahoma (possibly only if created before 11/1/98), Pennsylvania (if created before 1/1/05), Rhode Island, South Carolina, Texas, Utah']
+    list: ['States that recognize these marriages:<br/>  Alabama, Colorado, District of Columbia, Georgia (if created before 1/1/97), Idaho (if created before 1/1/96), Iowa, Kansas, Montana, New Hampshire (for inheritance purposes only, and the recognition begins only after the first spouse dies.), Ohio (if created before 10/10/91), Oklahoma (possibly only if created before 11/1/98), Pennsylvania (if created before 1/1/05), Rhode Island, South Carolina, Texas, Utah']
 }
 
 export const WeddingOfficiantsRequirements = {

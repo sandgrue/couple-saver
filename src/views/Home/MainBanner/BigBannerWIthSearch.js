@@ -46,7 +46,7 @@ const BigBannerWIthSearch = () => {
 
     // useEffect(() => {
     window.onclick = e => {
-        // console.log(e.target.id, "FIRST");
+        console.log(e.target.id, "FIRST");
         if (e.target.id == searchInputBox) {
             // setcurrentClickedElement(searchInputBox);
             setisInputActive(true);

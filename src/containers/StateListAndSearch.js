@@ -1,6 +1,118 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState, useEffect, useRef } from 'react'
+import { Link, useHistory } from 'react-router-dom';
+import apiConnector from '../backendConnect/apiService';
+import { SUCCESS } from '../constants/constants';
+import { addDash, isItNull } from '../Functions/functions';
 
 const StateListAndSearch = () => {
+
+
+
+    let history = useHistory();
+
+    const [searchText, setsearchText] = useState('');
+
+
+    const handlechage = (e) => {
+        setsearchText(e.target.value);
+    }
+
+
+
+
+    // const [currentClickedElement, setcurrentClickedElement] = useState('');
+    const [isInputActive, setisInputActive] = useState(false);
+
+    // useEffect(() => {
+    // window.onclick = e => {
+    //     // console.log(e.target.id, "FIRST");
+    //     if (e.target.id == 'searchBox') {
+    //         setisInputActive(true);
+    //     } else {
+    //         setisInputActive(false);
+    //     }
+    // }
+    // }, []);
+
+
+    // useEffect(() => {
+    //     console.log(isInputActive, "IS INPUT ACTIVE");
+    // }, [isInputActive])
+
+
+
+
+
+    const [searchResult, setsearchResult] = useState([]);
+    const [statusOfApi, setstatusOfApi] = useState('');
+
+
+    useEffect(() => {
+        if (searchText === '' || searchText === null || searchText.length === 0 || isItNull(searchText)) {
+            setsearchResult([]);
+        } else {
+
+            if (isItNull(searchText)) {
+                setsearchResult([]);
+            } else {
+                let data = {
+                    search: searchText,
+                    page: 1,
+                    pagination: 10
+                }
+                apiConnector("searchResult", data)
+                    .then((res) => {
+                        if (res.status === SUCCESS) {
+                            console.log(res, "working");
+                            setsearchResult(res.data.result);
+                            if (res.status === SUCCESS) {
+                                setstatusOfApi(SUCCESS);
+                            } else {
+                                setstatusOfApi(res.status);
+                            }
+                        } else {
+                            console.log("API failure", 'working');
+                        }
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+            }
+        }
+    }, [searchText]);
+
+
+    const [latlngdata, setlatlngdata] = useState();
+
+    const latlngurl = 'https://pro.ip-api.com/json?key=JQ2bhI11BHF1bzV';
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios.post(latlngurl)
+                .then(res => {
+                    setlatlngdata(res.data)
+                }).catch(error => {
+                    console.log('error', error);
+                });
+        };
+        fetchData();
+    }, [latlngurl]);
+
+
+
+
+    useEffect(() => {
+
+    }, [searchResult]);
+
+
+    const pushToState = () => {
+        history.push(`/state/${latlngdata.city}`);
+        setsearchText('');
+    }
+
+
     return (
         <div class="stateBasedList">
             <div class="container">
@@ -10,9 +122,72 @@ const StateListAndSearch = () => {
                             <div class="stateListTitle">
                                 <h3 class="mb-0 fontSize28 fontWeight700 primaryColor fontFamily2">Find based on your state</h3>
                                 <div class="stateInput mt-3">
-                                    <input type="text" class="form-control" placeholder="Filter by State / County / ZIP Code"
-                                        aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                    <input type="text" class="form-control" placeholder="Filter by State / County / ZIP Code" onChange={handlechage}
+                                        value={searchText}
+                                        id='searchBox' />
                                 </div>
+
+                                {
+                                    searchText.length === 0 ?
+                                        null
+                                        :
+                                        statusOfApi === SUCCESS ?
+                                            < ul className="serachDatadrop posRel">
+                                                {
+                                                    searchResult.length === 0 ?
+                                                        <>
+                                                            <p>
+                                                                <Link className='secondaryColor w-100 d-flex align-items-center' onClick={() => pushToState(latlngdata.city)}>
+                                                                    <svg className='mr-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.208 16.712a.75.75 0 01-.469-1.425 5.564 5.564 0 003.548-3.548.75.75 0 011.425.469 7.064 7.064 0 01-4.504 4.504zM4.712 8.26a.75.75 0 01-1.425-.468 7.064 7.064 0 014.505-4.505.75.75 0 01.469 1.425A5.564 5.564 0 004.712 8.26zm11.522.479a.75.75 0 00.478-.947 7.065 7.065 0 00-4.504-4.505.75.75 0 00-.469 1.425 5.564 5.564 0 013.548 3.548.75.75 0 00.947.479zm-7.973 6.548a.75.75 0 01-.469 1.425 7.065 7.065 0 01-4.505-4.504.75.75 0 011.425-.469 5.564 5.564 0 003.549 3.548z" fill="#726F6C" /><path d="M10 7a3 3 0 110 6 3 3 0 010-6z" fill="#3db675" /></svg>
+                                                                    Use Your Current Location
+                                                                </Link>
+                                                            </p>
+
+                                                            {
+                                                                searchText.length === 0 ?
+                                                                    null
+                                                                    :
+                                                                    <p className='secondaryColor w-100 d-block'>
+                                                                        <span className='secondaryColor w-100 d-block'>
+                                                                            No County Found with <b className='font-weight999' >{searchText}</b> name
+                                                                        </span>
+                                                                    </p>
+                                                            }
+                                                        </>
+                                                        :
+                                                        <>
+                                                            <p>
+                                                                <Link className='secondaryColor w-100 d-flex align-items-center' onClick={() => pushToState(latlngdata.city)}>
+                                                                    <svg className='mr-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.208 16.712a.75.75 0 01-.469-1.425 5.564 5.564 0 003.548-3.548.75.75 0 011.425.469 7.064 7.064 0 01-4.504 4.504zM4.712 8.26a.75.75 0 01-1.425-.468 7.064 7.064 0 014.505-4.505.75.75 0 01.469 1.425A5.564 5.564 0 004.712 8.26zm11.522.479a.75.75 0 00.478-.947 7.065 7.065 0 00-4.504-4.505.75.75 0 00-.469 1.425 5.564 5.564 0 013.548 3.548.75.75 0 00.947.479zm-7.973 6.548a.75.75 0 01-.469 1.425 7.065 7.065 0 01-4.505-4.504.75.75 0 011.425-.469 5.564 5.564 0 003.549 3.548z" fill="#726F6C" /><path d="M10 7a3 3 0 110 6 3 3 0 010-6z" fill="#3db675" /></svg>
+                                                                    Use Your Current Location
+                                                                </Link>
+                                                            </p>
+
+                                                            {
+                                                                searchResult.map(
+                                                                    (item, index) => {
+                                                                        return (
+                                                                            <p className='d-block listItemBlock'>
+                                                                                <Link className='searchListitem d-flex align-items-center' onClick={() => pushToState(addDash(item.county_name))}>
+                                                                                    <span className='d-block'>
+                                                                                        {item.county_name}, {item.state_abbr.toUpperCase()}
+                                                                                    </span>
+                                                                                </Link>
+                                                                            </p>
+                                                                        )
+                                                                    }
+                                                                )
+                                                            }
+                                                        </>
+                                                }
+
+                                            </ul>
+                                            :
+                                            null
+                                }
+
+
+
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -83,8 +258,8 @@ const StateListAndSearch = () => {
                         </div>
                     </div>
                 </div>
-            </div>            
-        </div>        
+            </div>
+        </div >
     )
 }
 
